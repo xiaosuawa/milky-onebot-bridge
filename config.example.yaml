@@ -1,0 +1,20 @@
+bridge:
+  # 桥作为 Onebot 实现端，提供 HTTP API
+  onebot:
+    listen_host: "127.0.0.1"
+    listen_port: 5600        # 对应调用方的 api.host:port
+    access_token: ""
+    # 事件推送地址 (桥主动 POST 事件)
+    event_push_url: "http://127.0.0.1:5601/"
+
+  milky:
+    ws_url: "ws://127.0.0.1:8090/event"
+    http_url: "http://127.0.0.1:8090"
+    access_token: ""
+
+  # 忽略机器人自己的消息 (避免回环)
+  skip_self_message: true
+
+  extensions:
+    # 删除回复段后的第一个 @ 段 (客户端回复时常自动附带 @, 造成重复提及)
+    strip_at_after_reply: true

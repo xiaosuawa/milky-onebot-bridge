@@ -1,0 +1,13 @@
+[project]
+name = "milky-onebot-bridge"
+version = "0.1.0"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "httpx>=0.28",
+    "websockets>=14",
+    "starlette>=0.46",
+    "uvicorn>=0.34",
+    "pyyaml>=6.0",
+]
